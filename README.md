@@ -48,7 +48,7 @@ The control plane is the brain of the Kubernetes cluster and manages the entire 
 
 Key Components of the Control Plane:
 
-    1. API Server (kube-apiserver):
+  1. API Server (kube-apiserver):
         ◦ The entry point for all Kubernetes API requests. 
         ◦ Acts as the interface for users, external systems, and the control plane components. 
         ◦ Handles authentication, validation, and updates to the cluster's state (stored in etcd). 
