@@ -29,7 +29,7 @@ Specifications for how to run the containers (e.g., environment variables, ports
 | **Resource Management** | Manages CPU, memory, storage, and other hardware resources. | Uses resources from the node to run containers. |
 | **Lifecycle**           | A node remains in the cluster until it is removed. | Pods are short-lived, typically managed by controllers like Deployments or ReplicaSets. |
 | **Communication**       | Nodes communicate with the control plane and other nodes. | Pods communicate within the node and can expose services to other pods or nodes. |
-| **Scaling**             | Nodes scale by adding or removing physical/virtual machines. | Pods scale by increasing the number of replicas in a deployment or replica set. |
+
 
 ---
 
@@ -115,8 +115,19 @@ Key Components of a Worker Node:
         ◦ Receives instructions from the API server and ensures the containers in the pod are running. 
     5. Networking:
         ◦ Kube-proxy handles communication between services, pods, and external clients. 
+---
+
+### **Example Workflow:**
+
+1. The **Kubernetes Scheduler** places a **pod** on an appropriate **node** based on available resources.
+2. The **Kubelet** on the **node** manages the lifecycle of the pod, including starting the containers within the pod.
+3. The **pod**'s containers communicate with each other over localhost, sharing network and storage resources.
+4. If a pod fails, the **control plane** ensures that the pod is rescheduled to another **node**.
 
 ---
+
+---
+
 
 ### **Components of Control Plane and Their Communication with Data Plane**
 
@@ -143,14 +154,4 @@ Key Components of a Worker Node:
 
 
 
----
 
-
-### **Example Workflow:**
-
-1. The **Kubernetes Scheduler** places a **pod** on an appropriate **node** based on available resources.
-2. The **Kubelet** on the **node** manages the lifecycle of the pod, including starting the containers within the pod.
-3. The **pod**'s containers communicate with each other over localhost, sharing network and storage resources.
-4. If a pod fails, the **control plane** ensures that the pod is rescheduled to another **node**.
-
----
