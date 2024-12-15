@@ -4,8 +4,6 @@
 
 
 
-# Project Title
-
 1. Kubernetes (K8s) is a open-source powerful container orchestration platform that automates the deployment, scaling, and management of containerized applications. Kubernetes is written in Go Lang.
 
 
