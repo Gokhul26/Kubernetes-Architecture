@@ -106,7 +106,7 @@ Key Components of a Worker Node:
 
 6. Workflow:
  How Kubernetes Works
-
+```
     1. User Interaction:
         ◦ A user interacts with Kubernetes using the CLI (kubectl) or a web UI (Dashboard) to submit API requests. 
     2. API Server:
@@ -116,15 +116,17 @@ Key Components of a Worker Node:
     4. Kubelet:
         ◦ Receives instructions from the API server and ensures the containers in the pod are running. 
     5. Networking:
-        ◦ Kube-proxy handles communication between services, pods, and external clients. 
+        ◦ Kube-proxy handles communication between services, pods, and external clients.
+```
 ---
 
 ### **Example Workflow:**
-
-1. The **Kubernetes Scheduler** places a **pod** on an appropriate **node** based on available resources.
-2. The **Kubelet** on the **node** manages the lifecycle of the pod, including starting the containers within the pod.
-3. The **pod**'s containers communicate with each other over localhost, sharing network and storage resources.
-4. If a pod fails, the **control plane** ensures that the pod is rescheduled to another **node**.
+```
+    1. The **Kubernetes Scheduler** places a **pod** on an appropriate **node** based on available resources.
+    2. The **Kubelet** on the **node** manages the lifecycle of the pod, including starting the containers within the pod.
+    3. The **pod**'s containers communicate with each other over localhost, sharing network and storage resources.
+    4. If a pod fails, the **control plane** ensures that the pod is rescheduled to another **node**.
+```
 
 ---
 
